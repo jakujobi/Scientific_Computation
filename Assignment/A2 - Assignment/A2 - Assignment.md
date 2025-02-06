@@ -1,5 +1,7 @@
 
 # John Akujobi
+
+---
 # 4) Determine the single-precision and double-precision machine representation of the following decimal numbers:
 ## a. $1.0, -1.0$
 ### Single Precision (32‑bit)
@@ -45,13 +47,13 @@ I went and read about the IEEE‑754 which governs the machine representation of
 - **Sign bit:** 0
 - **Exponent:** All zeros: `00000000`
 - **Fraction:** All zeros (23 bits)
-- **Combined bit pattern:** $0\;|\;00000000\;|\;000000000000000000000000∣00000000∣00000000000000000000000$
+- **Combined bit pattern:** $0∣00000000∣00000000000000000000000$
 - **Hexadecimal:** `0x00000000`
 #### For $−0.0$:
 - **Sign bit:** 1
 - **Exponent:** `00000000`
 - **Fraction:** All zeros
-- **Combined bit pattern:** $1\;|\;00000000\;|\;000000000000000000000001∣00000000∣00000000000000000000000$
+- **Combined bit pattern:** $1∣00000000∣00000000000000000000000$
 - **Hexadecimal:** `0x80000000`
 
 ### Double Precision (64‑bit)
@@ -141,6 +143,99 @@ Hex = `4280BE00`
 Binary = `0 10000000101 0000 0001 0111 1100 0000 0000 0000 0000 0000 0000 0000 0000 0000`
 Hex = `405017C000000000`
 
+---
+## Results from python script
+Here is the link to my code
+
+```cardlink
+url: https://github.com/jakujobi/Scientific_Computation/blob/main/Assignment/A2%20-%20Assignment/A2_IEEE754Converter.py
+title: "Scientific_Computation/Assignment/A2 - Assignment/A2_IEEE754Converter.py at main · jakujobi/Scientific_Computation"
+description: "Contribute to jakujobi/Scientific_Computation development by creating an account on GitHub."
+host: github.com
+favicon: https://github.githubassets.com/favicons/favicon.svg
+image: https://opengraph.githubassets.com/9cfa6dde79829a1282acece83fc4d3d575a60e68773c85d804e7e211bfb4f052/jakujobi/Scientific_Computation
+```
+
+
+```python
+Value: +1.0 (1.0)
+ Single Precision (32-bit):
+  Binary:   00111111100000000000000000000000
+  Hex:      0x3f800000
+  Fields:   Sign = 0  Exponent = 127  Fraction = 0
+
+ Double Precision (64-bit):
+  Binary:   0011111111110000000000000000000000000000000000000000000000000000
+  Hex:      0x3ff0000000000000
+  Fields:   Sign = 0  Exponent = 1023  Fraction = 0
+
+============================================================
+
+Value: -1.0 (-1.0)
+ Single Precision (32-bit):
+  Binary:   10111111100000000000000000000000
+  Hex:      0xbf800000
+  Fields:   Sign = 1  Exponent = 127  Fraction = 0
+
+ Double Precision (64-bit):
+  Binary:   1011111111110000000000000000000000000000000000000000000000000000
+  Hex:      0xbff0000000000000
+  Fields:   Sign = 1  Exponent = 1023  Fraction = 0
+
+============================================================
+
+Value: +0.0 (0.0)
+ Single Precision (32-bit):
+  Binary:   00000000000000000000000000000000
+  Hex:      0x0
+  Fields:   Sign = 0  Exponent = 0  Fraction = 0
+
+ Double Precision (64-bit):
+  Binary:   0000000000000000000000000000000000000000000000000000000000000000
+  Hex:      0x0
+  Fields:   Sign = 0  Exponent = 0  Fraction = 0
+
+============================================================
+
+Value: -0.0 (-0.0)
+ Single Precision (32-bit):
+  Binary:   10000000000000000000000000000000
+  Hex:      0x80000000
+  Fields:   Sign = 1  Exponent = 0  Fraction = 0
+
+ Double Precision (64-bit):
+  Binary:   1000000000000000000000000000000000000000000000000000000000000000
+  Hex:      0x8000000000000000
+  Fields:   Sign = 1  Exponent = 0  Fraction = 0
+
+============================================================
+
+Value: -9876.54321 (-9876.54321)
+ Single Precision (32-bit):
+  Binary:   11000110000110100101001000101100
+  Hex:      0xc61a522c
+  Fields:   Sign = 1  Exponent = 140  Fraction = 1724972
+
+ Double Precision (64-bit):
+  Binary:   1100000011000011010010100100010110000111111001111100000001101110
+  Hex:      0xc0c34a4587e7c06e
+  Fields:   Sign = 1  Exponent = 1036  Fraction = 926087423443054
+
+============================================================
+
+Value: 64.37109375 (64.37109375)
+ Single Precision (32-bit):
+  Binary:   01000010100000001011111000000000
+  Hex:      0x4280be00
+  Fields:   Sign = 0  Exponent = 133  Fraction = 48640
+
+ Double Precision (64-bit):
+  Binary:   0100000001010000000101111100000000000000000000000000000000000000
+  Hex:      0x405017c000000000
+  Fields:   Sign = 0  Exponent = 1029  Fraction = 26113401159680
+
+============================================================
+```
 
 ---
 # **16.** Consider a computer that operates in base $\beta$ and carries n digits in the mantissa of its floating-point number system. Show that the rounding of a real number $x$ to the nearest machine number $\tilde{x}$ involves a relative error of at most $\frac{1}{2} \beta^{1-n}$
