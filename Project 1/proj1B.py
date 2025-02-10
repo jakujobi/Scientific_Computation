@@ -4,6 +4,10 @@ import streamlit as st
 
 # Set page config first
 st.set_page_config(page_title="Numerical Differentiation Analysis", layout="wide")
+# Add this after the st.set_page_config line
+st.markdown("""
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+""", unsafe_allow_html=True)
 
 # Add CSS for better styling
 st.markdown("""
@@ -36,23 +40,23 @@ with st.expander("📚 Theoretical Background", expanded=True):
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("""
+        st.markdown(r"""
         **Forward Difference (Formula 1):**
-        \[
-        f'(x) \approx \frac{f(x+h) - f(x)}{h}
-        \]
-        - Truncation error: \( O(h) \)
-        - Rounding error: \( O(\epsilon/h) \)
+
+        $f'(x) \approx \frac{f(x+h) - f(x)}{h}$
+
+        - Truncation error: $O(h)$
+        - Rounding error: $O(\epsilon/h)$
         """)
         
     with col2:
-        st.markdown("""
+        st.markdown(r"""
         **Central Difference (Formula 2):**
-        \[
-        f'(x) \approx \frac{f(x+h) - f(x-h)}{2h}
-        \]
-        - Truncation error: \( O(h^2) \)
-        - Rounding error: \( O(\epsilon/h) \)
+
+        $f'(x) \approx \frac{f(x+h) - f(x-h)}{2h}$
+
+        - Truncation error: $O(h^2)$
+        - Rounding error: $O(\epsilon/h)$
         """)
 
 # Sidebar controls
@@ -141,18 +145,18 @@ col1, col2 = st.columns(2)
 with col1:
     st.markdown(f"""
     **Forward Difference Optimal h:**
-    \[
-    h_{{opt}} = \sqrt{{2\epsilon}} \approx {opt_h1:.2e}
-    \]
+    
+    $h_{{opt}} = \sqrt{{2\epsilon}} \\approx {opt_h1:.2e}$
+    
     - Minimum achievable error: {np.sqrt(2*eps)/2:.2e}
     """)
 
 with col2:
     st.markdown(f"""
     **Central Difference Optimal h:**
-    \[
-    h_{{opt}} = \sqrt[3]{{3\epsilon}} \approx {opt_h2:.2e}
-    \]
+    
+    $h_{{opt}} = \\sqrt[3]{{3\epsilon}} \\approx {opt_h2:.2e}$
+    
     - Minimum achievable error: {(3*eps)**(2/3)/6:.2e}
     """)
 
