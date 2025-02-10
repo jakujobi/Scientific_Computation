@@ -1,0 +1,77 @@
+Value: +1.0 (1.0)
+ Single Precision (32-bit):
+  Binary:   00111111100000000000000000000000
+  Hex:      0x3f800000
+  Fields:   Sign = 0  Exponent = 127  Fraction = 0
+
+ Double Precision (64-bit):
+  Binary:   0011111111110000000000000000000000000000000000000000000000000000
+  Hex:      0x3ff0000000000000
+  Fields:   Sign = 0  Exponent = 1023  Fraction = 0
+
+============================================================
+
+Value: -1.0 (-1.0)
+ Single Precision (32-bit):
+  Binary:   10111111100000000000000000000000
+  Hex:      0xbf800000
+  Fields:   Sign = 1  Exponent = 127  Fraction = 0
+
+ Double Precision (64-bit):
+  Binary:   1011111111110000000000000000000000000000000000000000000000000000
+  Hex:      0xbff0000000000000
+  Fields:   Sign = 1  Exponent = 1023  Fraction = 0
+
+============================================================
+
+Value: +0.0 (0.0)
+ Single Precision (32-bit):
+  Binary:   00000000000000000000000000000000
+  Hex:      0x0
+  Fields:   Sign = 0  Exponent = 0  Fraction = 0
+
+ Double Precision (64-bit):
+  Binary:   0000000000000000000000000000000000000000000000000000000000000000
+  Hex:      0x0
+  Fields:   Sign = 0  Exponent = 0  Fraction = 0
+
+============================================================
+
+Value: -0.0 (-0.0)
+ Single Precision (32-bit):
+  Binary:   10000000000000000000000000000000
+  Hex:      0x80000000
+  Fields:   Sign = 1  Exponent = 0  Fraction = 0
+
+ Double Precision (64-bit):
+  Binary:   1000000000000000000000000000000000000000000000000000000000000000
+  Hex:      0x8000000000000000
+  Fields:   Sign = 1  Exponent = 0  Fraction = 0
+
+============================================================
+
+Value: -9876.54321 (-9876.54321)
+ Single Precision (32-bit):
+  Binary:   11000110000110100101001000101100
+  Hex:      0xc61a522c
+  Fields:   Sign = 1  Exponent = 140  Fraction = 1724972
+
+ Double Precision (64-bit):
+  Binary:   1100000011000011010010100100010110000111111001111100000001101110
+  Hex:      0xc0c34a4587e7c06e
+  Fields:   Sign = 1  Exponent = 1036  Fraction = 926087423443054
+
+============================================================
+
+Value: 64.37109375 (64.37109375)
+ Single Precision (32-bit):
+  Binary:   01000010100000001011111000000000
+  Hex:      0x4280be00
+  Fields:   Sign = 0  Exponent = 133  Fraction = 48640
+
+ Double Precision (64-bit):
+  Binary:   0100000001010000000101111100000000000000000000000000000000000000
+  Hex:      0x405017c000000000
+  Fields:   Sign = 0  Exponent = 1029  Fraction = 26113401159680
+
+============================================================
