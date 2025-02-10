@@ -143,19 +143,19 @@ opt_h2 = (3*eps)**(1/3)
 
 col1, col2 = st.columns(2)
 with col1:
-    st.markdown(f"""
+    st.markdown(rf"""
     **Forward Difference Optimal h:**
     
-    $h_{{opt}} = \sqrt{{2\epsilon}} \\approx {opt_h1:.2e}$
+    $h_{{\mathrm{{opt}}}} = \sqrt{{2\epsilon}} \approx {opt_h1:.2e}$
     
     - Minimum achievable error: {np.sqrt(2*eps)/2:.2e}
     """)
 
 with col2:
-    st.markdown(f"""
+    st.markdown(rf"""
     **Central Difference Optimal h:**
     
-    $h_{{opt}} = \\sqrt[3]{{3\epsilon}} \\approx {opt_h2:.2e}$
+    $h_{{\mathrm{{opt}}}} = \sqrt[3]{{3\epsilon}} \approx {opt_h2:.2e}$
     
     - Minimum achievable error: {(3*eps)**(2/3)/6:.2e}
     """)
