@@ -1,5 +1,6 @@
 # 1) The Maclaurin series for $(1 + x)^n$ is also known as the binomial series. 
 $(1+x)^{n}= 1 + nx + \frac{n(n-1)}{2!} +  \cdots  (x^{2}<1)$
+Then give it s particular forms in summation notation by letting n = 2, n = 3, and n = 1/2.
 
 > [!NOTE]
 > I found a more general form of the binomial theorem for it (valid for $|x| < 1$):
@@ -9,7 +10,7 @@ $(1+x)^{n}= 1 + nx + \frac{n(n-1)}{2!} +  \cdots  (x^{2}<1)$
 > $\binom{n}{k} = \frac{n (n - 1) (n - 2) \cdots (n - k + 1)}{k!}$.
 > 
 
-## a. Derivation
+## a. Derive the series and give its 
 1. Let $f(x) = (1 + x)^n$.
     
 2. The $k$th derivative evaluated at $x=0$ is:
