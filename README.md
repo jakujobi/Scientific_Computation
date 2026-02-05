@@ -269,9 +269,18 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 ## 📄 License
 
-**Unknown** - No license file is currently present in this repository.
+**Pending License Selection** - This repository is currently unlicensed. All rights reserved by the author.
 
-**TODO**: The repository owner should add an appropriate license (e.g., MIT, Apache 2.0, or specify "All Rights Reserved" for coursework).
+This is academic coursework for MATH 374 - Computational Theory (Spring 2025). Solutions are original work and subject to academic integrity policies.
+
+**Usage:**
+- ✅ View and learn from the code
+- ✅ Link to this repository
+- ✅ Fork for personal study (not for academic submission)
+- ❌ Use for your own assignments (academic dishonesty)
+- ❌ Redistribute without permission
+
+See [LICENSE.md](LICENSE.md) for full details and recommendations for adding a proper license.
 
 ## 🙏 Acknowledgements
 
